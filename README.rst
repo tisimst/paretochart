@@ -47,6 +47,8 @@ Basic Examples
      fig.canvas.set_window_title('Pareto Plot Test Figure')
      plt.show()
 
+.. image:: pareto_plot_test_figure.png
+
 Installation
 ------------
 
