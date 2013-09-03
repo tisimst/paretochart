@@ -1,3 +1,4 @@
+===========
 paretochart
 ===========
 
@@ -7,15 +8,21 @@ Features
 --------
 
 - **Data labels** for the chart x-axis.
-- **Fully customizable** with special non-keyword and keyword inputs:
-   - Bar chart: follows the inputs of the `matplotlib.pyplot.bar`_ function.
-   - Cumulative line: follows the inputs of the `matplotlib.pyplot.plot`_ function.
-   - Limit line: follows the inputs of the `matplotlib.axes.Axes.axhline`_ function.
+- **Fully customizable** with unique ``arg`` and ``kwarg`` inputs:
+   - *Bar chart*: follows the inputs of the `matplotlib.pyplot.bar`_ 
+     function (use ``bar_args=(...)`` and ``bar_kwargs={...}``).
+   - *Cumulative line*: follows the inputs of the `matplotlib.pyplot.plot`_ 
+     function (use ``line_args=(...)`` and ``line_kwargs={...}``).
+   - *Limit line*: follows the inputs of the `matplotlib.axes.Axes.axhline`_ 
+     function (use ``limit_args=(...)`` and ``limit_kwargs={...}``).
 - Put the chart on **arbitrary axes**.
 
-Basic Examples
---------------
+Examples
+--------
 ::
+     
+     import matplotlib.pyplot as plt
+     from paretochart import pareto
 
      # plot data using the indices as labels
      data = [21, 2, 10, 4, 16]
@@ -47,12 +54,16 @@ Basic Examples
      fig.canvas.set_window_title('Pareto Plot Test Figure')
      plt.show()
 
-.. image:: pareto_plot_test_figure.png
+
+This should result in something like this:
+
+.. image:: https://raw.github.com/tisimst/paretochart/master/pareto_plot_test_figure.png
+   :scale: 75%
 
 Installation
 ------------
 
-Simply download the ``paretochart.py`` file and put it in a directory that python can find it.
+Go to the GitHub_ page, simply download ``paretochart.py`` and put it in a directory that python can find it.
 
 Contact
 -------
@@ -65,3 +76,5 @@ Please send **feature requests, bug reports, or feedback** to `Abraham Lee`_.
 .. _matplotlib.pyplot.plot: http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot
 .. _matplotlib.axes.Axes.axhline: http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.axhline
 .. _Abraham Lee: mailto:tisimst@gmail.com
+.. _GitHub: https://github.com/tisimst/paretochart
+
